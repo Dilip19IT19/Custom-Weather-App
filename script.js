@@ -117,8 +117,9 @@ function onError(err)
 
 function onSuccess(position)
 {
-  let lat=coords.latitude;
-  let long=coords.longitude;
+  let coordinates=position.coords;
+  let lat=coordinates.latitude;
+  let long=coordinates.longitude;
   info.classList.add("pending");
   info.innerHTML="Getting weather information...";
   fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&appid=3b50db04d3c54f16bc31b10eb676b7cd`)
