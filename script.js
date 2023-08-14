@@ -77,8 +77,7 @@ function requestApi(city)
             <div class="humid">${humidity}%</div>
             <div class="text2">Humidity</div>
           </div>
-        </div>
-          
+        </div>         
 
 
       </div>
@@ -121,7 +120,6 @@ function onSuccess(position)
   let lat=coordinates.latitude;
   let long=coordinates.longitude;
   
-
   API_KEY="8deb412534dc453c94d6ec04b9dc78f7";
   fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=${API_KEY}`)
   .then((response)=>{
@@ -138,4 +136,3 @@ function onSuccess(position)
   })
 
 }
-
